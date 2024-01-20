@@ -1,32 +1,26 @@
-import Faq from "@/src/components/landing/Faq";
-import Features from "@/src/components/landing/Features";
-import Header from "@/src/components/landing/Header";
-import LogoCloud from "@/src/components/landing/LogoCloud";
-import Overviews from "@/src/components/landing/Overviews";
-import Pricing from "@/src/components/landing/Pricing";
-import Testimonials from "@/src/components/landing/Testimonials";
-import Footer from "@/src/components/layout/Footer";
-import { getCurrentUser } from "@/src/lib/session";
-import { getUserSubscription } from "@/src/lib/subscription";
+"use client";
 
-const Home = async () => {
-	const user = await getCurrentUser();
-	const userSubscription = user ? await getUserSubscription(user?.id!) : null;
+import Footer from "@/components/layout/Footer";
+import CTA from "@/components/sections/CTA";
+import Features from "@/components/sections/Features";
+import Hero from "@/components/sections/Hero";
+import Pricing from "@/components/sections/Pricing";
+import Testimonials from "@/components/sections/Testimonials";
 
+export default function Home() {
 	return (
-		<>
-			<Header user={user} />
-			<div className="lg:max-w-7xl md:max-w-5xl w-[95%] mx-auto flex flex-col items-center gap-20 md:gap-36">
-				<LogoCloud />
-				<Overviews />
-				<Features />
-				<Pricing user={user} userSubscription={userSubscription} />
-				<Testimonials />
-				<Faq />
-				<Footer />
+		<main className="relative">
+			<div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+				<div className="absolute left-0 right-0 top-20 -z-10 m-auto h-[60vh] w-[50vw] rounded-full bg-gradient-to-tr from-violet-500 to-orange-300 opacity-20 blur-[120px]"></div>
 			</div>
-		</>
+			<section className="flex flex-col items-center justify-center w-[95%] lg:max-w-7xl mx-auto relative">
+				<Hero />
+				<Features />
+				<Pricing />
+				<Testimonials />
+				<CTA />
+			</section>
+			<Footer />
+		</main>
 	);
-};
-
-export default Home;
+}

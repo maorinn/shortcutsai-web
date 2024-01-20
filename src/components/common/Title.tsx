@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/src/utils";
+import { cn } from "@/utils";
 
 const Title = ({
 	children,

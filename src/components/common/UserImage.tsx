@@ -1,6 +1,6 @@
 "use client";
 
-import { UploadButton } from "@/src/config/uploadThing";
+import { UploadButton } from "@/config/uploadThing";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { ClipLoader } from "react-spinners";

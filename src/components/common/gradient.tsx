@@ -1,4 +1,4 @@
-import { cn } from "@/src/utils";
+import { cn } from "@/utils";
 
 const Gradient = ({ className }: { className?: string }) => {
 	return (

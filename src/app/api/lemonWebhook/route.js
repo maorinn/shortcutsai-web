@@ -1,5 +1,5 @@
-import { ls } from "@/src/lib/lemon";
-import { prisma } from "@/src/lib/prisma";
+import { ls } from "@/lib/lemon";
+import { prisma } from "@/lib/prisma";
 
 async function processEvent(event) {
 	let processingError = "";

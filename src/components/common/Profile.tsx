@@ -2,8 +2,8 @@ import {
 	Avatar,
 	AvatarFallback,
 	AvatarImage,
-} from "@/src/components/ui/avatar";
-import { Button } from "@/src/components/ui/button";
+} from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -13,7 +13,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuShortcut,
 	DropdownMenuTrigger,
-} from "@/src/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import { User } from "next-auth";
 import { signOut } from "next-auth/react";
 import Link from "next/link";

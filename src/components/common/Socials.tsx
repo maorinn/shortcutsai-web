@@ -8,7 +8,7 @@ import {
 	GitHubLogoIcon,
 } from "@radix-ui/react-icons";
 import { motion, useInView } from "framer-motion";
-import { FADE_UP_ANIMATION } from "@/src/utils";
+import { FADE_UP_ANIMATION } from "@/utils";
 
 const SocialLinks: FC = () => {
 	const ref = React.useRef(null);

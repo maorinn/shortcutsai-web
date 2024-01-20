@@ -1,10 +1,10 @@
 "use client";
 
-import Title from "@/src/components/common/Title";
-import Gradient from "@/src/components/common/gradient";
-import { Button } from "@/src/components/ui/button";
-import { Input } from "@/src/components/ui/input";
-import { Separator } from "@/src/components/ui/separator";
+import Title from "@/components/common/Title";
+import Gradient from "@/components/common/gradient";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 
 import { signIn } from "next-auth/react";
 import Image from "next/image";
@@ -69,7 +69,7 @@ export default function Login() {
 			<Gradient className="dark:blur-[200px]" />
 			<div className="py-6 px-8 sm:px-16 absolute top-0 left-0">
 				<Link href="/">
-					<h2 className="text-2xl font-bold">Indiespace.</h2>
+					<h2 className="text-2xl font-bold">ShortcutsAI</h2>
 				</Link>
 			</div>
 			<div className="w-[100%] flex items-center justify-center h-full">

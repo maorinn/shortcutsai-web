@@ -1,4 +1,4 @@
-import Title, { Subtitle } from "@/src/components/common/Title";
+import Title, { Subtitle } from "@/components/common/Title";
 
 const Dashboard = () => {
 	return (

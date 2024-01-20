@@ -1,5 +1,5 @@
-import { ls } from "@/src/lib/lemon";
-import { getCurrentUser } from "@/src/lib/session";
+import { ls } from "@/lib/lemon";
+import { getCurrentUser } from "@/lib/session";
 import { NextResponse } from "next/server";
 
 export async function POST() {

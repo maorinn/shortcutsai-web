@@ -1,5 +1,5 @@
-import { prisma } from "@/src/lib/prisma";
-import { getCurrentUser } from "@/src/lib/session";
+import { prisma } from "@/lib/prisma";
+import { getCurrentUser } from "@/lib/session";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {

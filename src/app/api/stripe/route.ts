@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
-import { absoluteUrl } from "@/src/utils";
-import { stripe } from "@/src/lib/stripe";
-import { getCurrentUser } from "@/src/lib/session";
-import { getUserSubscription } from "@/src/lib/subscription";
+import { absoluteUrl } from "@/utils";
+import { stripe } from "@/lib/stripe";
+import { getCurrentUser } from "@/lib/session";
+import { getUserSubscription } from "@/lib/subscription";
 
 const billingUrl = absoluteUrl("/");
 
