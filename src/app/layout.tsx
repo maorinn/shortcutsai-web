@@ -72,10 +72,8 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const CrispWithNoSSR = dynamic(() => import("../config/crisp"));
 	return (
 		<html lang="en">
-			<CrispWithNoSSR />
 			<PHProvider>
 				<body className={font.className}>
 					<NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
