@@ -12,7 +12,7 @@ const Hero = () => {
 		<>
 			<Navbar />
 			<motion.div
-				className="w-full flex items-center justify-center flex-col text-center gap-14 min-h-[calc(100vh-5rem)] lg:mb-0"
+				className="w-full flex items-center mt-28 flex-col text-center gap-14 min-h-[calc(100vh-15rem)] lg:mb-0"
 				initial="hidden"
 				animate="show"
 				viewport={{ once: true }}
@@ -81,7 +81,7 @@ const Hero = () => {
 							businesses worldwide
 						</p>
 					</div>
-					<LogoCloud />
+					{/* <LogoCloud /> */}
 				</div>
 			</motion.div>
 		</>
