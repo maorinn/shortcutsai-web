@@ -1,10 +1,24 @@
+"use client";
+
 import Title from "@/components/typography/Title";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Subtitle from "@/components/typography/Subtitle";
 import PriceCard from "@/components/shared/PriceCard";
 import Wavy from "@/components/icons/Wavy";
+import { User } from "next-auth";
+import { UserSubscriptionPlan } from "@/types";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
-const Pricing = () => {
+const Pricing = ({
+	user,
+	userSubscription,
+}: {
+	user?: User;
+	userSubscription: UserSubscriptionPlan | null;
+}) => {
+
+
 	return (
 		<div
 			className="flex flex-col items-center justify-center gap-10 w-full py-10 sm:mb-20"
@@ -38,7 +52,7 @@ const Pricing = () => {
 						className="flex items-start gap-6 w-full justify-center flex-wrap"
 					>
 						{yearlyPlans.map((plan, index) => (
-							<PriceCard plan={plan} key={index} />
+							<PriceCard user={user} userSubscription={userSubscription} plan={plan} key={index} />
 						))}
 					</TabsContent>
 					<TabsContent
@@ -46,7 +60,7 @@ const Pricing = () => {
 						className="flex items-start gap-6 w-full justify-center flex-wrap"
 					>
 						{monthlyPlans.map((plan, index) => (
-							<PriceCard plan={plan} key={index} />
+							<PriceCard plan={plan} user={user} userSubscription={userSubscription} key={index} />
 						))}
 					</TabsContent>
 				</Tabs>

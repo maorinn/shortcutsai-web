@@ -1,3 +1,6 @@
+"use client";
+
+import ProfileDropdown from "@/components/common/Profile";
 import { Button } from "@/components/ui/button";
 import { User } from "next-auth";
 import Image from "next/image";
@@ -21,7 +24,6 @@ const links = [
 
 const Navbar = ({ user }: { user?: User }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 	return (
 		<div className="relative flex items-center justify-between w-full p-6">
 			<Link
@@ -50,7 +52,13 @@ const Navbar = ({ user }: { user?: User }) => {
 			</ul>
 			<div className="lg:flex items-center gap-4 hidden">
 				<Button variant="outline">Free Trial</Button>
-				<Button><Link href="/auth/signin">Login</Link></Button>
+				{user ? (
+					<ProfileDropdown user={user} />
+				) : (
+					<Button>
+						<Link href="/auth/signin">Login</Link>
+					</Button>
+				)}
 			</div>
 			<div className="lg:hidden">
 				<button

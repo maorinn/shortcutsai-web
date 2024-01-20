@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { FADE_UP_ANIMATION } from "@/utils";
@@ -6,11 +8,12 @@ import LogoCloud from "@/components/shared/LogoCloud";
 import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import { PaperPlaneIcon } from "@radix-ui/react-icons";
+import { User } from "next-auth";
 
-const Hero = () => {
+const Hero = ({ user }: { user?: User }) => {
 	return (
 		<>
-			<Navbar />
+			<Navbar user={user} />
 			<motion.div
 				className="w-full flex items-center mt-28 flex-col text-center gap-14 min-h-[calc(100vh-15rem)] lg:mb-0"
 				initial="hidden"
