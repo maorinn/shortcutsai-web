@@ -63,11 +63,10 @@ const Pricing = ({
 				{prices.map((price, index) => (
 					<div
 						key={index + price.name}
-						className={`flex flex-col items-start gap-6 p-8 rounded-lg border-[1px] ${
-							price.recommended
-								? "bg-gradient-to-br from-primary to-primary/20 text-white"
-								: "bg-white dark:bg-black dark:bg-opacity-10"
-						}`}
+						className={`flex flex-col items-start gap-6 p-8 rounded-lg border-[1px] ${price.recommended
+							? "bg-gradient-to-br from-primary to-primary/20 text-white"
+							: "bg-white dark:bg-black dark:bg-opacity-10"
+							}`}
 					>
 						<div className="flex flex-col items-start gap-2">
 							<Subtitle className="text-[20px] font-medium">
@@ -98,11 +97,10 @@ const Pricing = ({
 							))}
 						</div>
 						<Button
-							className={`w-full rounded-md p-5 ${
-								price.recommended
-									? "bg-gradient-to-br from-blue-400 to-blue-800 text-white hover:from-blue-500 hover:to-blue-900"
-									: "bg-gradient-to-br from-gray-700 via-gray-900 to-black text-white"
-							}`}
+							className={`w-full rounded-md p-5 ${price.recommended
+								? "bg-gradient-to-br from-blue-400 to-blue-800 text-white hover:from-blue-500 hover:to-blue-900"
+								: "bg-gradient-to-br from-gray-700 via-gray-900 to-black text-white"
+								}`}
 							onClick={() => {
 								handleSubscription(price.priceId!);
 							}}

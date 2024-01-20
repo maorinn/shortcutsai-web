@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { User } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,7 +19,7 @@ const links = [
 	},
 ];
 
-const Navbar = () => {
+const Navbar = ({ user }: { user?: User }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
