@@ -37,3 +37,201 @@
     @apply bg-background text-foreground;
   }
 }
+
+.nh-hero-devices {
+  z-index: 5;
+  width: 100%;
+  max-width: 1040px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+  position: relative;
+}
+.getrewindtext {
+  letter-spacing: -0.25px;
+  font-weight: 700;
+}
+
+.nh-hero-device-frames {
+  position: relative;
+}
+
+.nh-hero-laptop {
+  width: 95%;
+  position: relative;
+}
+
+.nh-hero-phone {
+  z-index: 10;
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+
+.iphone-frame-img {
+  width: 250px;
+  max-width: none;
+  position: relative;
+}
+
+.laptop-frame-img {
+  z-index: 10;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.video-rewind-browse-mac {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 10.4%;
+  left: 9.95%;
+}
+
+.video-rewind-iphone {
+  width: 89%;
+  border-radius: 30px;
+  position: absolute;
+  top: 2.5%;
+  bottom: 2.5%;
+  left: 5.5%;
+  right: 5.5%;
+  overflow: hidden;
+}
+
+.nh-overcome-media-fill {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(208, 216, 221, 0.45);
+  border: 1px solid rgba(179, 196, 205, 0.39);
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.ic-crash {
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  position: relative;
+}
+
+@media (max-width: 1160px) {
+  .nh-hero-devices {
+    width: calc(90% - 2rem);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .nh-hero-devices .nh-hero-phone .iphone-frame-img {
+    width: 215px;
+  }
+}
+
+@media (min-width: 775px) and (max-width: 900px) {
+  .nh-hero-devices .nh-hero-phone .iphone-frame-img {
+    width: 175px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 775px) {
+  .nh-hero-devices .nh-hero-phone .iphone-frame-img {
+    width: 135px;
+  }
+  .video-rewind-iphone {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nh-hero-devices .nh-hero-phone .iphone-frame-img {
+    width: 125px;
+  }
+  .video-rewind-iphone {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 510px) {
+  .nh-hero-laptop {
+    width: 100%;
+  }
+  .nh-hero-devices .nh-hero-phone .iphone-frame-img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 420px) {
+  .nh-hero-laptop {
+    width: 100%;
+  }
+  .nh-hero-devices .nh-hero-phone .iphone-frame-img {
+    width: 92px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .nh-section-inner-grid {
+    display: block;
+    margin: 0 auto;
+    max-width: 85%;
+  }
+  .nh-section-inner-grid .nh-section-grid-item:first-of-type {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .nh-section-inner-grid {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .nh-hero-bg-btmcontainer {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  .nh-wrap {
+    padding: 0 2rem;
+  }
+  .nh-section-inset {
+    margin: 10px;
+  }
+  .nh-wrap.sectionverticalpadding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .nh-section-inset .nh-section-inner-grid {
+    grid-column-gap: 3rem;
+  }
+  .nh-section-inset .nh-inner-feature-icon-item {
+    grid-template-columns: 74px 1fr;
+    align-items: center;
+  }
+  .nh-section-inset .nh-inner-feature-icon-block {
+    transform-origin: center left;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 479px) {
+  .nh-section-inner-grid .nh-section-grid-item:first-of-type {
+    margin-bottom: 3rem;
+  }
+  .nh-wrap.sectionverticalpadding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .nh-wrap {
+    padding: 0 1.25rem;
+  }
+}
