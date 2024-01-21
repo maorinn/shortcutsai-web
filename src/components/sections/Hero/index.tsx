@@ -18,7 +18,7 @@ const Hero = ({ user }: { user?: User }) => {
 		<>
 			<Navbar user={user} />
 			<motion.div
-				className="w-full flex items-center mt-28 flex-col text-center gap-14 min-h-[calc(100vh-15rem)] lg:mb-0"
+				className="w-full flex items-center mt-20 flex-col text-center gap-14 min-h-[calc(100vh-15rem)] lg:mb-0"
 				initial="hidden"
 				animate="show"
 				viewport={{ once: true }}
